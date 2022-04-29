@@ -1,0 +1,10 @@
+########################################
+# go
+########################################
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+hook_add = '''
+    source $HOME/dotfiles/vim/plugins/vim-go.vim
+'''
+

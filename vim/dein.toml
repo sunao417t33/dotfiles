@@ -1,0 +1,42 @@
+########################################
+# プラグイン管理
+########################################
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# スニペット 
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugin]]
+repo = 'Shougo/neosnippet-snippets'
+
+# 補完
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+# asyncompleteのソースにlspを追加
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+# asyncompleteのソースにfileを追加
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-file.vim'
+
+# LSP
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+  source $HOME/dotfiles/vim/plugins/vim-lsp.vim
+'''
+
+# vim-lspの自動設定
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+#NERDTree
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  source $HOME/dotfiles/vim/plugins/nerdtree.vim
+'''
