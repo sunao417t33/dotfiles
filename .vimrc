@@ -1,6 +1,9 @@
 " Leaderをスペースにする
 let mapleader = "\<Space>"
 
+" bashを使用
+set shell=/bin/bash
+
 " runtimepathにカスタマイズ用の設定ディレクトリを追加
 set runtimepath+=$HOME/vim/after/
 
@@ -100,6 +103,8 @@ set softtabstop=4
 set smartindent
 " 行頭の余白内でTabが shiftwidth の数だけインデントする
 set smarttab
+" filetype.vim によって設定を変更する
+filetype plugin indent on
 
 " 不可視文字を表示する
 set list
@@ -131,22 +136,20 @@ set wildmenu
 set wildmode=full
 " コマンド履歴
 set history=5000
-" bashを使用
-set shell=/bin/bash
 
 " 括弧の補完
-"inoremap { {}<LEFT>
-"inoremap ( ()<LEFT>
-"inoremap [ []<LEFT>
+inoremap { {}<LEFT>
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+
+"inoremap {<Enter> {}<Left><CR><ESC><S-o>
+"inoremap [<Enter> []<Left><CR><ESC><S-o>
+"inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 " クオーテートの補完
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ` ``<LEFT>
-
-"inoremap {<Enter> {}<Left><CR><ESC><S-o>
-"inoremap [<Enter> []<Left><CR><ESC><S-o>
-"inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 " Ctrl + hjklだけでウィンドウ移動できるようにする
 nnoremap <c-h> <c-w>h

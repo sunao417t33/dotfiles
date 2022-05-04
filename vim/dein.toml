@@ -11,6 +11,10 @@ repo = 'Shougo/neosnippet.vim'
 [[plugin]]
 repo = 'Shougo/neosnippet-snippets'
 
+# 非同期ジョブの互換ライブラリ(vim-lspの依存で必要)
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
 # 補完
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
@@ -33,8 +37,12 @@ hook_add = '''
 # vim-lspの自動設定
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
+#merged = 0
+#hook_add = '''
+#    source $HOME/vim/plugins/vim-lsp-settings.vim
+#'''
 
-#NERDTree
+# NERDTree
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''

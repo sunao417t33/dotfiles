@@ -92,12 +92,15 @@ tab-reset() {
 
 function chpwd() { ls; echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print $1"/"$2}'| rev)\007"}
 
+#Violet
+tab-color 218 112 214
+
 #----------------------------------------------------------
 # fzf
 #----------------------------------------------------------
 if [ -f ~/.fzf.zsh ]; then
     source ~/.fzf.zsh
-    export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+    #export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
     export FZF_DEFAULT_OPT='--height 40% --reverse --border'
 fi
 
