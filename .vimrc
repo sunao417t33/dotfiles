@@ -168,3 +168,9 @@ colorscheme jellybeans
 " 行番号を赤色にする
 highlight LineNr ctermfg=red
 
+" 背景の透過
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none
