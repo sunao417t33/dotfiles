@@ -115,10 +115,14 @@ fi
 
 #--Path
 #--fzf
-if [[ -f ~/.fzf.zsh ]]; then
+if type fzf >/dev/null 2>&1; then
+  if [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+  else
     source ~/.fzf.zsh
-    export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
-    export FZF_DEFAULT_OPT='--height 40% --reverse --border'
+  fi
+  export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+  export FZF_DEFAULT_OPT='--height 40% --reverse --border'
 fi
 
 
