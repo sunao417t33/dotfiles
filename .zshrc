@@ -97,6 +97,7 @@ fi
 alias ll='ls -ltr'
 alias dirs='dirs -v'
 alias grep='grep --color=auto'
+alias history='history 1'
 
 alias ..='cd ../'
 alias ...='cd ../../'
